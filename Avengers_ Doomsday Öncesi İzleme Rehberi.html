@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avengers: Doomsday Öncesi İzleme Rehberi</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--text:#1b1b1f;--muted:#666a73;--accent:#c8102e;--line:#e3e0d8;--tag:#f0ece2;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111116;--card:#1b1b22;--text:#f0eee9;--muted:#9a9ca6;--accent:#ff4d5e;--line:#2c2c36;--tag:#262630;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111116;--card:#1b1b22;--text:#f0eee9;--muted:#9a9ca6;--accent:#ff4d5e;--line:#2c2c36;--tag:#262630;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+main{max-width:760px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:clamp(26px,6vw,38px);line-height:1.15;margin:0 0 8px}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);margin:0 0 20px}
+.bar{background:var(--line);border-radius:99px;height:8px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .25s}
+.count{font-size:13px;color:var(--muted);margin-bottom:22px}
+h2{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:28px 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.card.done{opacity:.55}
+.card input{margin-top:5px;width:20px;height:20px;accent-color:var(--accent);flex:none}
+.n{font-weight:700;color:var(--accent);min-width:24px}
+.card h3{margin:0 0 2px;font-size:17px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}
+.tag{background:var(--tag);border-radius:99px;padding:1px 9px;font-size:12px;color:var(--muted)}
+.card p{margin:0;font-size:15px}
+.why{margin-top:6px!important;font-size:14px!important;color:var(--muted)}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>Avengers: <span>Doomsday</span> öncesi izleme rehberi</h1>
+<p class="sub">Marvel’ın resmi olarak önerdiği 15 yapım, kısa ve spoiler’sız özetlerle. İzlediklerini işaretle.</p>
+<div class="bar"><i id="fill"></i></div>
+<div class="count" id="count">0 / 15 izlendi</div>
+
+<h2>Temel: Avengers ve X-Men kökenleri</h2>
+<div id="g1"></div>
+<h2>Çoklu evren yolu</h2>
+<div id="g2"></div>
+<h2>Yeni nesil ve yeni takımlar</h2>
+<div id="g3"></div>
+
+<footer>Liste, Marvel’ın yayımladığı öneri listesine dayanır. Bu sayfa hayran yapımıdır, Marvel/Disney ile bağlantısı yoktur.</footer>
+</main>
+<script>
+var G={
+g1:[
+["X-Men","Film · 2000","Mutantlar toplumda korkuyla karşılanırken Profesör X ve Magneto’nun zıt görüşleri iki ayrı yol çizer.","Magneto ve Mystique’in geri dönüşü için temel."],
+["X2: X-Men United","Film · 2003","Mutantlara yönelik askeri bir tehdit, eski rakipleri istemeden aynı safa getirir.","X-Men kadrosunun en güçlü dönemi."],
+["Captain America: The First Avenger","Film · 2011","Zayıf ama cesur Steve Rogers, süper asker deneyiyle Kaptan Amerika olur ve Hydra’ya karşı savaşır.","Tesseract ve Avengers’ın ahlaki pusulası."],
+["The Avengers","Film · 2012","Loki, Tesseract’ın gücüyle Dünya’yı ele geçirmeye çalışır; kahramanlar ilk kez tek takım olur.","Takım dinamiğinin başlangıcı."],
+["Avengers: Infinity War","Film · 2018","Thanos, Sonsuzluk Taşları’nı toplamak için evrenin dört bir yanında kahramanlarla çarpışır.","Büyük çaplı Avengers buluşmasının şablonu."],
+["Avengers: Endgame","Film · 2019","Kaybedilenleri geri getirmek için kahramanlar zamanda yolculuğa çıkar; birçok hikâye kapanır.","Tony Stark’ın yolculuğunun duygusal zirvesi."]
+],
+g2:[
+["Loki","Dizi · 2021–2023","Zaman Değişimi Otoritesi (TVA), Loki’yi zaman çizgisini bozduğu için yakalar ve çoklu evren kapısı aralanır.","Çoklu evren ve dallanan zaman çizgilerinin en net anlatımı."],
+["Shang-Chi and the Legend of the Ten Rings","Film · 2021","Sıradan hayat süren Shang-Chi, babasının örgütü ve Ten Rings’le yüzleşmek zorunda kalır.","Doomsday’de dönecek yeni kahramanlardan biri."],
+["Spider-Man: No Way Home","Film · 2021","Doctor Strange’in bozulan büyüsü, başka evrenlerden tanıdık yüzleri Peter’ın dünyasına getirir.","Evrenler arası geçişin sinemadaki en büyük anı."],
+["Doctor Strange in the Multiverse of Madness","Film · 2022","Strange, çoklu evrenler arasında gezen genç America Chavez’i korumaya çalışır.","Çoklu evrenin resmî tanıtımı ve Wanda’nın yolu."],
+["Black Panther: Wakanda Forever","Film · 2022","T’Challa’nın ardından Wakanda, yeni bir su altı uygarlığı Talokan ile karşı karşıya kalır.","Wakanda liderliği ve Shuri’nin yeni rolü."],
+["Captain America: Brave New World","Film · 2025","Sam Wilson Kaptan Amerika olarak ilk büyük sınavında uluslararası bir krizle karşılaşır.","Güncel Kaptan Amerika’yı tanımak için."]
+],
+g3:[
+["Deadpool & Wolverine","Film · 2024","Deadpool, Wolverine’i yanına alarak TVA’nın tehdidine ve Void’in karanlığına karşı mücadele eder.","Marvel’ın bugün neleri bir araya getirebildiğinin kanıtı."],
+["Thunderbolts*","Film · 2025","Kaybedenlerden oluşan bir antikahraman grubu, tehlikeli bir görevde istemeden takım olur.","Yeni bir takımın doğuşu."],
+["The Fantastic Four: First Steps","Film · 2025","Retro-fütüristik bir dünyada Fantastik Dörtlü, Galactus tehdidiyle yüzleşirken aile olmayı da öğrenir.","Marvel’ın ‘ilk ailesi’nin MCU’ya girişi."]
+]};
+var total=0,done=0,i=1;
+function render(id,list){
+  var el=document.getElementById(id);
+  list.forEach(function(f){
+    var idx=i++;total++;
+    var d=document.createElement('label');d.className='card';
+    d.innerHTML='<input type="checkbox"><span class="n">'+idx+'</span><div><h3></h3><div class="meta"><span class="tag"></span></div><p></p><p class="why"></p></div>';
+    d.querySelector('h3').textContent=f[0];
+    d.querySelector('.tag').textContent=f[1];
+    d.querySelectorAll('p')[0].textContent=f[2];
+    d.querySelector('.why').textContent='Neden önemli: '+f[3];
+    d.querySelector('input').addEventListener('change',function(e){
+      d.classList.toggle('done',e.target.checked);
+      done+=e.target.checked?1:-1;update();
+    });
+    el.appendChild(d);
+  });
+}
+function update(){
+  document.getElementById('fill').style.width=(done/total*100)+'%';
+  document.getElementById('count').textContent=done+' / '+total+' izlendi';
+}
+render('g1',G.g1);render('g2',G.g2);render('g3',G.g3);
+</script>
+</body>
+</html>
